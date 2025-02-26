@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Marketing Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>We Scale Your Clothing Brand with Facebook Ads</h1>
+        <p>Turn clicks into customers with high-converting ad strategies.</p>
+        <div class="cta-buttons">
+            <a href="https://calendly.com/your-link" class="cta-button">Book a Free Call</a>
+            <a href="https://instagram.com/your-instagram" class="cta-button instagram">DM Us on Instagram</a>
+        </div>
+    </header>
+    
+    <section id="about">
+        <h2>Why Work With Us?</h2>
+        <p>We help clothing brands achieve massive growth through data-driven Facebook Ads.</p>
+        <ul>
+            <li>Proven strategies tailored for fashion brands</li>
+            <li>Increase your ROI with optimized ad campaigns</li>
+            <li>Full-service ad management from A to Z</li>
+        </ul>
+    </section>
+    
+    <section id="case-studies">
+        <h2>Success Stories</h2>
+        <p>Brands we've helped scale:</p>
+        <div class="case-study">
+            <img src="images/case1.jpg" alt="Case Study 1">
+            <h3>Brand X - 5x ROAS in 2 Months</h3>
+            <p>We optimized their Facebook Ads, leading to a 500% increase in revenue.</p>
+        </div>
+        <div class="case-study">
+            <img src="images/case2.jpg" alt="Case Study 2">
+            <h3>Brand Y - $100K in Sales in 3 Months</h3>
+            <p>Our campaigns generated six figures in just one quarter.</p>
+        </div>
+    </section>
+    
+    <section id="book-call">
+        <h2>Ready to Scale Your Brand?</h2>
+        <p>Book a free strategy call or message us on Instagram.</p>
+        <div class="cta-buttons">
+            <a href="https://calendly.com/your-link" class="cta-button">Book a Free Call</a>
+            <a href="https://instagram.com/your-instagram" class="cta-button instagram">DM Us on Instagram</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Your Agency Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.cta-button.instagram {
+    background-color: #e1306c;
+}
+
+.cta-button.instagram:hover {
+    background-color: #b82858;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.case-study {
+    background: #1a1a2e;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.case-study img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #0f3460;
+    padding: 20px;
+    margin-top: 50px;
+}
