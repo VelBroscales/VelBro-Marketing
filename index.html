@@ -3,55 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Marketing Agency</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Brand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+        header {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #00bfff;
+            font-size: 36px;
+        }
+        nav a {
+            color: #00bfff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+        section h2 {
+            color: #00bfff;
+            font-size: 30px;
+        }
+        .images-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .images-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .cta-btn {
+            background-color: #00bfff;
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .cta-btn:hover {
+            background-color: #008cba;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>We Scale Your Clothing Brand with Facebook Ads</h1>
-        <p>Turn clicks into customers with high-converting ad strategies.</p>
-        <div class="cta-buttons">
-            <a href="https://calendly.com/your-link" class="cta-button">Book a Free Call</a>
-            <a href="https://instagram.com/your-instagram" class="cta-button instagram">DM Us on Instagram</a>
-        </div>
+        <h1>Your Brand Name</h1>
+        <nav>
+            <a href="#section1">Home</a>
+            <a href="#section2">About</a>
+            <a href="#section3">Services</a>
+            <a href="#section4">Work Examples</a>
+            <a href="#section5">Contact</a>
+        </nav>
     </header>
-    
-    <section id="about">
-        <h2>Why Work With Us?</h2>
-        <p>We help clothing brands achieve massive growth through data-driven Facebook Ads.</p>
-        <ul>
-            <li>Proven strategies tailored for fashion brands</li>
-            <li>Increase your ROI with optimized ad campaigns</li>
-            <li>Full-service ad management from A to Z</li>
-        </ul>
+
+    <section id="section1">
+        <h2>Welcome to Our Brand</h2>
+        <p>We help businesses scale with innovative marketing strategies and stunning design. Let us transform your brand.</p>
     </section>
-    
-    <section id="case-studies">
-        <h2>Success Stories</h2>
-        <p>Brands we've helped scale:</p>
-        <div class="case-study">
-            <img src="images/case1.jpg" alt="Case Study 1">
-            <h3>Brand X - 5x ROAS in 2 Months</h3>
-            <p>We optimized their Facebook Ads, leading to a 500% increase in revenue.</p>
-        </div>
-        <div class="case-study">
-            <img src="images/case2.jpg" alt="Case Study 2">
-            <h3>Brand Y - $100K in Sales in 3 Months</h3>
-            <p>Our campaigns generated six figures in just one quarter.</p>
-        </div>
+
+    <section id="section2">
+        <h2>About Us</h2>
+        <p>Our team of experts specializes in scaling brands through effective advertising and design. With years of experience, we know what works.</p>
     </section>
-    
-    <section id="book-call">
-        <h2>Ready to Scale Your Brand?</h2>
-        <p>Book a free strategy call or message us on Instagram.</p>
-        <div class="cta-buttons">
-            <a href="https://calendly.com/your-link" class="cta-button">Book a Free Call</a>
-            <a href="https://instagram.com/your-instagram" class="cta-button instagram">DM Us on Instagram</a>
+
+    <section id="section3">
+        <h2>Our Services</h2>
+        <p>We offer comprehensive services that include social media marketing, website design, brand strategy, and much more.</p>
+    </section>
+
+    <section id="section4">
+        <h2>Work Examples</h2>
+        <div class="images-container">
+            <img src="example1.jpg" alt="Work Example 1">
+            <img src="example2.jpg" alt="Work Example 2">
+            <img src="example3.jpg" alt="Work Example 3">
+            <img src="example4.jpg" alt="Work Example 4">
+            <img src="example5.jpg" alt="Work Example 5">
         </div>
     </section>
-    
+
+    <section id="section5">
+        <h2>Contact Us</h2>
+        <p>If you're ready to take your brand to the next level, we want to hear from you!</p>
+        <button class="cta-btn" onclick="window.location.href='https://calendly.com/your-link'">Schedule a Call</button>
+        <button class="cta-btn" onclick="window.location.href='https://instagram.com/your-username'">Message Us on Instagram</button>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Your Agency Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Your Brand Name. All rights reserved.</p>
     </footer>
 </body>
 </html>
