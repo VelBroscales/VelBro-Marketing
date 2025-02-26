@@ -14,57 +14,76 @@
         }
         header {
             background-color: #1a1a1a;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
         }
         header h1 {
             color: #00bfff;
-            font-size: 36px;
+            font-size: 50px;
         }
         nav a {
             color: #00bfff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            margin: 0 20px;
+            font-size: 22px;
         }
         section {
-            padding: 50px;
+            padding: 70px 20px;
             text-align: center;
         }
         section h2 {
             color: #00bfff;
-            font-size: 30px;
+            font-size: 40px;
+            margin-bottom: 30px;
         }
-        .images-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .images-container img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
+        section p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
         }
         .cta-btn {
             background-color: #00bfff;
             color: #000;
-            padding: 15px 30px;
+            padding: 20px 40px;
             border: none;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 22px;
             cursor: pointer;
             margin: 20px;
         }
         .cta-btn:hover {
             background-color: #008cba;
         }
+        .cta-btn-instagram {
+            background-color: #ff1493;
+            color: #000;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 22px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .cta-btn-instagram:hover {
+            background-color: #ff3385;
+        }
+        .images-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            position: absolute;
+        }
+        .image1 { top: 20%; left: 10%; }
+        .image2 { top: 50%; left: 60%; }
+        .image3 { top: 10%; right: 10%; }
+        .image4 { top: 60%; right: 20%; }
+        .image5 { top: 30%; left: 70%; }
         footer {
             background-color: #1a1a1a;
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
         }
     </style>
 </head>
@@ -82,35 +101,42 @@
 
     <section id="section1">
         <h2>Welcome to Our Brand</h2>
-        <p>We help businesses scale with innovative marketing strategies and stunning design. Let us transform your brand.</p>
+        <p>We help businesses scale with innovative marketing strategies and stunning design. Let us transform your brand into something extraordinary that captivates your audience and drives growth.</p>
     </section>
 
     <section id="section2">
         <h2>About Us</h2>
-        <p>Our team of experts specializes in scaling brands through effective advertising and design. With years of experience, we know what works.</p>
+        <p>Our team consists of passionate experts who specialize in scaling brands through tailored marketing campaigns and exceptional design. We take pride in our ability to generate results and provide creative solutions to businesses of all sizes.</p>
     </section>
 
     <section id="section3">
         <h2>Our Services</h2>
-        <p>We offer comprehensive services that include social media marketing, website design, brand strategy, and much more.</p>
+        <p>We offer a range of services to help your business grow:</p>
+        <ul style="font-size: 22px; text-align: left; margin-left: 30px;">
+            <li>Social Media Marketing</li>
+            <li>Website Design & Development</li>
+            <li>Brand Strategy & Consulting</li>
+            <li>Paid Advertising Campaigns</li>
+            <li>Content Creation</li>
+        </ul>
     </section>
 
     <section id="section4">
         <h2>Work Examples</h2>
         <div class="images-container">
-            <img src="example1.jpg" alt="Work Example 1">
-            <img src="example2.jpg" alt="Work Example 2">
-            <img src="example3.jpg" alt="Work Example 3">
-            <img src="example4.jpg" alt="Work Example 4">
-            <img src="example5.jpg" alt="Work Example 5">
+            <img src="example1.jpg" alt="Work Example 1" class="image1">
+            <img src="example2.jpg" alt="Work Example 2" class="image2">
+            <img src="example3.jpg" alt="Work Example 3" class="image3">
+            <img src="example4.jpg" alt="Work Example 4" class="image4">
+            <img src="example5.jpg" alt="Work Example 5" class="image5">
         </div>
     </section>
 
     <section id="section5">
         <h2>Contact Us</h2>
-        <p>If you're ready to take your brand to the next level, we want to hear from you!</p>
+        <p>Are you ready to take your brand to the next level? Let’s work together and make it happen. Contact us today and let's discuss how we can help you grow!</p>
         <button class="cta-btn" onclick="window.location.href='https://calendly.com/your-link'">Schedule a Call</button>
-        <button class="cta-btn" onclick="window.location.href='https://instagram.com/your-username'">Message Us on Instagram</button>
+        <button class="cta-btn-instagram" onclick="window.location.href='https://instagram.com/your-username'">Message Us on Instagram</button>
     </section>
 
     <footer>
