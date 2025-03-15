@@ -16,6 +16,15 @@
         .container {
             width: 80%;
             margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .btn {
             display: inline-block;
@@ -29,19 +38,25 @@
         .btn.blue {
             background-color: #007bff;
             color: white;
+            animation: pulse 1.5s infinite;
         }
         .btn.pink {
             background-color: #ff007b;
             color: white;
+            animation: pulse 1.5s infinite;
         }
-        .btn:hover {
-            opacity: 0.8;
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         .success-stories {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 50px 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
         }
         .story {
             display: flex;
@@ -53,11 +68,14 @@
         .story img {
             width: 50%;
             max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
         .story-text {
             width: 50%;
             padding: 20px;
             text-align: left;
+            font-size: 20px;
         }
         @media (max-width: 768px) {
             .container {
