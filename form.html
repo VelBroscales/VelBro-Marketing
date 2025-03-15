@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #0d0d0d; color: white; }
+        .container { padding: 50px; max-width: 600px; margin: auto; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        .btn { background: #007bff; color: white; padding: 15px 30px; font-size: 18px; border: none; cursor: pointer; border-radius: 5px; }
+        .btn:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Apply Now</h1>
+        <p>Fill out this form to get started.</p>
+        
+        <form action="https://formspree.io/f/YOUR_EMAIL_HERE" method="POST">
+            <input type="text" name="business" placeholder="What is your business about?" required>
+            <input type="text" name="goal" placeholder="Your main marketing goal" required>
+            <input type="text" name="budget" placeholder="Your ad budget" required>
+            <input type="text" name="experience" placeholder="Have you used Facebook Ads before?" required>
+            <input type="email" name="email" placeholder="Your email or WhatsApp" required>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
