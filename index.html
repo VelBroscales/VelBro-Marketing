@@ -50,6 +50,29 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        .why-choose {
+            width: 80%;
+            margin: 50px auto;
+            text-align: left;
+        }
+        .why-choose ul {
+            list-style: none;
+            padding: 0;
+        }
+        .why-choose li {
+            font-size: 20px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .why-choose li::before {
+            content: '\2022';
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 10px;
+        }
         .success-stories {
             display: flex;
             flex-direction: column;
@@ -78,7 +101,7 @@
             font-size: 20px;
         }
         @media (max-width: 768px) {
-            .container {
+            .container, .why-choose, .success-stories {
                 width: 95%;
             }
             .story {
@@ -97,6 +120,17 @@
         <a href="https://calendly.com/yourbooking" class="btn blue" target="_blank">Book a Free Call</a>
         <a href="https://instagram.com/youraccount" class="btn pink" target="_blank">Visit Instagram</a>
     </div>
+    
+    <div class="why-choose">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Proven track record of increasing sales and brand awareness</li>
+            <li>Expertly crafted ad campaigns tailored to your business</li>
+            <li>Dedicated support and continuous optimization</li>
+            <li>Results-driven approach with real data insights</li>
+        </ul>
+    </div>
+    
     <div class="success-stories">
         <h2>Success Stories</h2>
         <div class="story">
