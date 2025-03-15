@@ -3,103 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Marketing Agency</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Agency</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #0a0a0a; color: #fff; text-align: center; }
-        h1, h2 { font-size: 2.5em; }
-        p { font-size: 1.2em; }
-        .buttons { margin: 20px; }
-        .btn { padding: 15px 30px; text-decoration: none; font-size: 1.2em; border-radius: 5px; display: inline-block; transition: 0.3s ease-in-out; }
-        .blue { background: #007bff; color: white; }
-        .pink { background: #e1306c; color: white; }
-        .btn:hover { transform: scale(1.1); }
-        .features { display: flex; justify-content: center; gap: 30px; margin: 50px 0; }
-        .feature { background: #1a1a1a; padding: 20px; border-radius: 10px; width: 250px; }
-        .feature h3 { font-size: 1.5em; }
-        .feature::before { content: '\2022'; color: #007bff; font-size: 2em; display: block; }
-        .success-stories { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 50px 0; }
-        .case-study { display: flex; align-items: center; justify-content: center; width: 80%; max-width: 1200px; margin: 20px 0; }
-        .case-study img { width: 50%; border-radius: 10px; }
-        .text { width: 50%; text-align: left; font-size: 1.5em; padding: 20px; }
-        .reverse { flex-direction: row-reverse; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn.blue {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn.pink {
+            background-color: #ff007b;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+        .success-stories {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .story {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 80%;
+            margin: 20px 0;
+        }
+        .story img {
+            width: 50%;
+            max-width: 500px;
+        }
+        .story-text {
+            width: 50%;
+            padding: 20px;
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .story {
+                flex-direction: column;
+                text-align: center;
+            }
+            .story img, .story-text {
+                width: 100%;
+            }
+        }
     </style>
-
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '616194104562138'); 
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=616194104562138&ev=PageView&noscript=1"
-/></noscript>
-
-
 </head>
 <body>
-    <header>
-        <h1>We Scale Your Clothing Brand with Facebook Ads</h1>
-        <p>Turn clicks into customers with high-converting ad strategies.</p>
-        <div class="buttons">
-            <a href=https://calendly.com/velbroscales/30min class="btn blue">Book a Free Call</a>
-            <a href="https://www.instagram.com/velbroscales" class="btn pink" target="_blank">DM Us on Instagram</a>
-        </div>
-    </header>
-
-    <section id="why-us">
-        <h2>Why Work With Us?</h2>
-        <div class="features">
-            <div class="feature">
-                <h3>Proven Strategies</h3>
-                <p>Tailored for fashion brands to maximize growth.</p>
-            </div>
-            <div class="feature">
-                <h3>High ROI</h3>
-                <p>We optimize campaigns for the best return on investment.</p>
-            </div>
-            <div class="feature">
-                <h3>Full-Service Management</h3>
-                <p>From strategy to execution, we handle it all.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="success-stories" class="success-stories">
+    <div class="container">
+        <h1>Grow Your Brand with Us</h1>
+        <a href="https://calendly.com/yourbooking" class="btn blue" target="_blank">Book a Free Call</a>
+        <a href="https://instagram.com/youraccount" class="btn pink" target="_blank">Visit Instagram</a>
+    </div>
+    <div class="success-stories">
         <h2>Success Stories</h2>
-        <div class="case-study">
-            <img src="images/image1.jpeg" alt="Brand X Result">
-            <div class="text">
-                <h3>5x ROAS in 2 Months</h3>
-                <p>We optimized their Facebook Ads, leading to a 500% increase in revenue.</p>
+        <div class="story">
+            <img src="example1.jpg" alt="Success Story 1">
+            <div class="story-text">
+                <p>Client A achieved 3x sales growth in just one month!</p>
             </div>
         </div>
-        <div class="case-study reverse">
-            <img src="images/image2.jpg" alt="Brand X Result">
-            <div class="text">
-                <h3>3x Sales Growth in 1 Month</h3>
-                <p>Our ad strategy helped triple monthly sales in just 30 days.</p>
+        <div class="story">
+            <div class="story-text">
+                <p>Client B increased engagement by 200% in 3 weeks!</p>
             </div>
+            <img src="example2.jpg" alt="Success Story 2">
         </div>
-    </section>
-
-    <section id="booking">
-        <h2>Ready to Scale Your Brand?</h2>
-        <p>Book a free strategy call or message us on Instagram.</p>
-        <div class="buttons">
-            <a href="https://calendly.com/yourbooking" class="btn blue" target="_blank">Book a Free Call</a>
-            <a href="https://instagram.com/youragency" class="btn pink" target="_blank">DM Us on Instagram</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 VelBroScales. All Rights Reserved.</p>
-    </footer>
+    </div>
 </body>
 </html>
