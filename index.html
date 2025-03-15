@@ -3,82 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Service Name</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn.blue {
+            background-color: #007bff;
+            color: white;
+            animation: pulse 1.5s infinite;
+        }
+        .btn.pink {
+            background-color: #ff007b;
+            color: white;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .section-text {
+            margin: 40px auto;
+            width: 70%;
+            font-size: 22px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out 0.3s forwards;
+        }
+        .why-choose {
+            width: 80%;
+            margin: 50px auto;
+            text-align: left;
+        }
+        .why-choose ul {
+            list-style: none;
+            padding: 0;
+        }
+        .why-choose li {
+            font-size: 20px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .why-choose li::before {
+            content: '\2022';
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 10px;
+        }
+        .success-stories {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+        .story {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 80%;
+            margin: 20px 0;
+        }
+        .story img {
+            width: 50%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        .story-text {
+            width: 50%;
+            padding: 20px;
+            text-align: left;
+            font-size: 20px;
+        }
+        @media (max-width: 768px) {
+            .container, .why-choose, .success-stories, .section-text {
+                width: 95%;
+            }
+            .story {
+                flex-direction: column;
+                text-align: center;
+            }
+            .story img, .story-text {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Your Service Name</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero">
-        <div class="container">
-            <h2>Welcome to Your Service Name</h2>
-            <p>We provide the best services for your needs.</p>
-            <div class="cta-buttons">
-                <a href="#schedule-call" class="btn btn-primary">Schedule a Call</a>
-                <a href="https://instagram.com/yourusername" class="btn btn-secondary">Message on Instagram</a>
+    <div class="container">
+        <h1>Grow Your Brand with Us</h1>
+        <a href="https://calendly.com/yourbooking" class="btn blue" target="_blank">Book a Free Call</a>
+        <a href="https://instagram.com/youraccount" class="btn pink" target="_blank">Visit Instagram</a>
+    </div>
+    
+    <div class="section-text">We help businesses scale fast with high-converting ad strategies.</div>
+    
+    <div class="why-choose">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Proven track record of increasing sales and brand awareness</li>
+            <li>Expertly crafted ad campaigns tailored to your business</li>
+            <li>Dedicated support and continuous optimization</li>
+            <li>Results-driven approach with real data insights</li>
+        </ul>
+    </div>
+    
+    <div class="section-text">We don’t just run ads. We drive real revenue growth.</div>
+    
+    <div class="success-stories">
+        <h2>Success Stories</h2>
+        <div class="story">
+            <img src="example1.jpg" alt="Success Story 1">
+            <div class="story-text">
+                <p>Client A achieved 3x sales growth in just one month!</p>
             </div>
         </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2>Why Choose Me?</h2>
-            <ul class="why-choose-me">
-                <li><span class="circle"></span>Professional Experience</li>
-                <li><span class="circle"></span>Creative Solutions</li>
-                <li><span class="circle"></span>Client-Oriented Approach</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="work1.jpg" alt="Work 1">
-                </div>
-                <div class="portfolio-item">
-                    <img src="work2.jpg" alt="Work 2">
-                </div>
-                <!-- Add more items as needed -->
+        <div class="story">
+            <div class="story-text">
+                <p>Client B increased engagement by 200% in 3 weeks!</p>
             </div>
+            <img src="example2.jpg" alt="Success Story 2">
         </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2>Success Stories</h2>
-            <div class="testimonial">
-                <img src="success1.jpg" alt="Success Story 1">
-                <p>This is the first success story. It was amazing working with me!</p>
-            </div>
-            <div class="testimonial">
-                <p>This is the second success story. Another great experience!</p>
-                <img src="success2.jpg" alt="Success Story 2">
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2023 Your Service Name. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="scripts.js"></script>
+    </div>
 </body>
 </html>
