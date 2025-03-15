@@ -1,9 +1,9 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #0a0a0a;
+    color: #ffffff;
 }
 
 .container {
@@ -12,95 +12,114 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
 header {
-    background: #333;
-    color: #fff;
+    background-color: #1a1a1a;
     padding: 20px 0;
 }
 
-header .logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
     display: flex;
+    justify-content: space-around;
 }
 
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
+nav ul li a {
+    color: #00bfff;
     text-decoration: none;
 }
 
-/* Hero Section */
-.hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
+#hero {
+    background-color: #1a1a1a;
     padding: 100px 0;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 48px;
+#hero h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 24px;
-    margin-bottom: 40px;
+.cta-buttons {
+    margin-top: 30px;
 }
 
-.hero .btn {
-    background: #ff6f61;
-    color: #fff;
+.btn {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-}
-
-/* Services Section */
-.services {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.service-list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.service-item {
-    flex: 1;
+    font-size: 1.2em;
     margin: 0 10px;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.service-item h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.btn-primary {
+    background-color: #00bfff;
+    color: #ffffff;
 }
 
-/* Footer */
+.btn-secondary {
+    background-color: #ff1493;
+    color: #ffffff;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+#about, #portfolio, #testimonials {
+    padding: 50px 0;
+}
+
+.why-choose-me {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose-me li {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #00bfff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.testimonial img {
+    width: 200px;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
+    background-color: #1a1a1a;
     padding: 20px 0;
+    text-align: center;
 }
