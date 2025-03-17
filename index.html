@@ -111,4 +111,59 @@
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
         .story-text {
-            width: 5
+            width: 50%;
+            padding: 20px;
+            text-align: left;
+            font-size: 20px;
+        }
+        @media (max-width: 768px) {
+            .container, .why-choose, .success-stories, .section-text {
+                width: 95%;
+            }
+            .story {
+                flex-direction: column;
+                text-align: center;
+            }
+            .story img, .story-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grow Your Brand with Us</h1>
+        <a href="form.html" class="btn">Apply Now</a>
+    </div>
+    
+    <div class="section-text">We help businesses scale fast with high-converting ad strategies.</div>
+    
+    <div class="why-choose">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Proven track record of increasing sales and brand awareness</li>
+            <li>Expertly crafted ad campaigns tailored to your business</li>
+            <li>Dedicated support and continuous optimization</li>
+            <li>Results-driven approach with real data insights</li>
+        </ul>
+    </div>
+    
+    <div class="section-text">We don’t just run ads. We drive real revenue growth.</div>
+    
+    <div class="success-stories">
+        <h2>Success Stories</h2>
+        <div class="story">
+            <img src="images/image1.jpeg" alt="Success Story 1">
+            <div class="story-text">
+                <p>3x sales growth in just one month!</p>
+            </div>
+        </div>
+        <div class="story">
+            <div class="story-text">
+                <p>Increased engagement by 200% in 3 weeks!</p>
+            </div>
+            <img src="images/image2.jpg" alt="Success Story 2">
+        </div>
+    </div>
+</body>
+</html>
