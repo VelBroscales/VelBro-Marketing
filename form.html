@@ -5,78 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply Now</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background: #0d0d0d; color: white; }
-        .container { padding: 50px; max-width: 600px; margin: auto; }
-        .question { display: none; }
-        .active { display: block; }
-        .btn { background: #007bff; color: white; padding: 15px 30px; font-size: 18px; border: none; cursor: pointer; border-radius: 5px; }
-        .btn:hover { background: #0056b3; }
-        input, select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+        }
+        .form-container {
+            width: 60%;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .question {
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+        input, select, button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        button {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Apply Now</h1>
-        <p>Answer these questions to proceed.</p>
-
-        <form id="applicationForm" action="https://formspree.io/f/YOUR_EMAIL_HERE" method="POST">
+    <h1>Apply Now</h1>
+    <div class="form-container">
+        <form id="applyForm">
             <div class="question active">
-                <label>Insert your brand's Instagram URL:</label>
-                <input type="text" name="instagram" required>
-                <button class="btn next">Next</button>
+                <p>Insert your brand's Instagram URL:</p>
+                <input type="url" id="instagram" required>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+            
+            <div class="question">
+                <p>Insert your website link:</p>
+                <input type="url" id="website" required>
+                <button type="button" onclick="nextQuestion()">Next</button>
             </div>
 
             <div class="question">
-                <label>Insert your website link:</label>
-                <input type="text" name="website" required>
-                <button class="btn next">Next</button>
-            </div>
-
-            <div class="question">
-                <label>What is your brand's monthly revenue?</label>
-                <select name="revenue" required>
-                    <option value="Not launched yet">A Brand hasn't launched yet</option>
-                    <option value="0-5K">$0 - $5K</option>
-                    <option value="5K-10K">$5K - $10K</option>
-                    <option value="10K-30K">$10K - $30K</option>
-                    <option value="30K+">+$30K</option>
+                <p>What is your brand's monthly revenue?</p>
+                <select id="revenue" required>
+                    <option value="">Select...</option>
+                    <option>A Brand hasn't launched yet</option>
+                    <option>$0 - $5K</option>
+                    <option>$5K - $10K</option>
+                    <option>$10K - $30K</option>
+                    <option>$30K +</option>
                 </select>
-                <button class="btn next">Next</button>
+                <button type="button" onclick="nextQuestion()">Next</button>
             </div>
 
             <div class="question">
-                <label>What is your marketing budget?</label>
-                <select name="budget" required>
-                    <option value="100-500">$100 - $500</option>
-                    <option value="1000-2000">$1,000 - $2,000</option>
-                    <option value="2000-3000">$2,000 - $3,000</option>
-                    <option value="3000-4000">$3,000 - $4,000</option>
-                    <option value="4000+">$4,000 + UP</option>
+                <p>What is your marketing budget?</p>
+                <select id="budget" required>
+                    <option value="">Select...</option>
+                    <option>$100 - $500</option>
+                    <option>$1,000 - $2,000</option>
+                    <option>$2,000 - $3,000</option>
+                    <option>$3,000 - $4,000</option>
+                    <option>$4,000 +</option>
                 </select>
-                <button class="btn submit" type="submit">Submit</button>
+                <button type="button" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <div class="question">
+                <p>Fill out your contact information:</p>
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="submit">Submit</button>
             </div>
         </form>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let currentStep = 0;
-            const questions = document.querySelectorAll(".question");
-            const nextButtons = document.querySelectorAll(".next");
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll(".question");
 
-            nextButtons.forEach((btn, index) => {
-                btn.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    if (index < questions.length - 1) {
-                        questions[currentStep].classList.remove("active");
-                        currentStep++;
-                        questions[currentStep].classList.add("active");
-                    }
-                });
-            });
+        function nextQuestion() {
+            if (questions[currentQuestion].querySelector("input, select").checkValidity()) {
+                questions[currentQuestion].classList.remove("active");
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    questions[currentQuestion].classList.add("active");
+                }
+            }
+        }
+
+        document.getElementById("applyForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you! Our team will be in touch with you shortly.");
+            this.reset();
+            questions.forEach(q => q.classList.remove("active"));
+            questions[0].classList.add("active");
+            currentQuestion = 0;
         });
     </script>
-
 </body>
 </html>
