@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #0d0d0d; color: white; }
+        .container { padding: 50px; max-width: 600px; margin: auto; }
+        .question { display: none; }
+        .active { display: block; }
+        .btn { background: #007bff; color: white; padding: 15px 30px; font-size: 18px; border: none; cursor: pointer; border-radius: 5px; }
+        .btn:hover { background: #0056b3; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Apply Now</h1>
+        <p>Answer these questions to proceed.</p>
+
+        <form id="applicationForm" action="https://formspree.io/f/YOUR_EMAIL_HERE" method="POST">
+            <div class="question active">
+                <label>Insert your brand's Instagram URL:</label>
+                <input type="text" name="instagram" required>
+                <button class="btn next">Next</button>
+            </div>
+
+            <div class="question">
+                <label>Insert your website link:</label>
+                <input type="text" name="website" required>
+                <button class="btn next">Next</button>
+            </div>
+
+            <div class="question">
+                <label>What is your brand's monthly revenue?</label>
+                <select name="revenue" required>
+                    <option value="Not launched yet">A Brand hasn't launched yet</option>
+                    <option value="0-5K">$0 - $5K</option>
+                    <option value="5K-10K">$5K - $10K</option>
+                    <option value="10K-30K">$10K - $30K</option>
+                    <option value="30K+">+$30K</option>
+                </select>
+                <button class="btn next">Next</button>
+            </div>
+
+            <div class="question">
+                <label>What is your marketing budget?</label>
+                <select name="budget" required>
+                    <option value="100-500">$100 - $500</option>
+                    <option value="1000-2000">$1,000 - $2,000</option>
+                    <option value="2000-3000">$2,000 - $3,000</option>
+                    <option value="3000-4000">$3,000 - $4,000</option>
+                    <option value="4000+">$4,000 + UP</option>
+                </select>
+                <button class="btn submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let currentStep = 0;
+            const questions = document.querySelectorAll(".question");
+            const nextButtons = document.querySelectorAll(".next");
+
+            nextButtons.forEach((btn, index) => {
+                btn.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    if (index < questions.length - 1) {
+                        questions[currentStep].classList.remove("active");
+                        currentStep++;
+                        questions[currentStep].classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
