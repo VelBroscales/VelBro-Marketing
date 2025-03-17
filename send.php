@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "your@email.com"; // Введи СВОЮ почту здесь!
+    $to = "velbroscales@gmail.com"; // Введи СВОЮ почту здесь!
     $subject = "New Application Submission";
 
     // Получаем данные из формы
