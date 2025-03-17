@@ -45,22 +45,22 @@
 <body>
     <h1>Apply Now</h1>
     <div class="form-container">
-        <form id="applyForm">
+        <form id="applyForm" action="send.php" method="POST">
             <div class="question active">
                 <p>Insert your brand's Instagram URL:</p>
-                <input type="url" id="instagram" required>
+                <input type="url" name="instagram" required>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
             
             <div class="question">
                 <p>Insert your website link:</p>
-                <input type="url" id="website" required>
+                <input type="url" name="website" required>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
 
             <div class="question">
                 <p>What is your brand's monthly revenue?</p>
-                <select id="revenue" required>
+                <select name="revenue" required>
                     <option value="">Select...</option>
                     <option>A Brand hasn't launched yet</option>
                     <option>$0 - $5K</option>
@@ -73,7 +73,7 @@
 
             <div class="question">
                 <p>What is your marketing budget?</p>
-                <select id="budget" required>
+                <select name="budget" required>
                     <option value="">Select...</option>
                     <option>$100 - $500</option>
                     <option>$1,000 - $2,000</option>
@@ -86,9 +86,9 @@
 
             <div class="question">
                 <p>Fill out your contact information:</p>
-                <input type="text" id="firstName" placeholder="First Name" required>
-                <input type="text" id="lastName" placeholder="Last Name" required>
-                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email" required>
                 <button type="submit">Submit</button>
             </div>
         </form>
@@ -109,12 +109,7 @@
         }
 
         document.getElementById("applyForm").addEventListener("submit", function(event) {
-            event.preventDefault();
             alert("Thank you! Our team will be in touch with you shortly.");
-            this.reset();
-            questions.forEach(q => q.classList.remove("active"));
-            questions[0].classList.add("active");
-            currentQuestion = 0;
         });
     </script>
 </body>
