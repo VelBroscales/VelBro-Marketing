@@ -41,16 +41,25 @@
                 transform: translateY(0);
             }
         }
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+        }
         .btn {
             display: inline-block;
             padding: 15px 30px;
-            margin: 10px;
+            margin: 20px;
             text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 8px;
             transition: 0.3s;
-            background-color: #007bff;
+            background: linear-gradient(45deg, #007bff, #0056b3);
             color: white;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
@@ -58,63 +67,83 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        .btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #0056b3, #003f8c);
+        }
         .section-text {
-            margin: 40px auto;
+            margin: 50px auto;
             width: 70%;
-            font-size: 22px;
+            font-size: 24px;
+            line-height: 1.6;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeIn 1s ease-out 0.3s forwards;
         }
         .why-choose {
             width: 80%;
-            margin: 50px auto;
+            margin: 60px auto;
             text-align: left;
+        }
+        .why-choose h2 {
+            text-align: center;
+            font-size: 32px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
         .why-choose ul {
             list-style: none;
             padding: 0;
         }
         .why-choose li {
-            font-size: 20px;
+            font-size: 22px;
             margin: 15px 0;
             display: flex;
             align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out 0.5s forwards;
         }
         .why-choose li::before {
-            content: '\2022';
+            content: '✔';
             color: #007bff;
             font-weight: bold;
             display: inline-block;
-            width: 1em;
+            width: 1.5em;
             margin-right: 10px;
         }
         .success-stories {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 50px 0;
+            margin: 60px 0;
             opacity: 0;
             animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+        .success-stories h2 {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
         .story {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             width: 80%;
-            margin: 20px 0;
+            margin: 30px 0;
         }
         .story img {
             width: 50%;
             max-width: 500px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .story img:hover {
+            transform: scale(1.05);
         }
         .story-text {
             width: 50%;
             padding: 20px;
             text-align: left;
-            font-size: 20px;
+            font-size: 22px;
         }
         @media (max-width: 768px) {
             .container, .why-choose, .success-stories, .section-text {
